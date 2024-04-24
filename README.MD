@@ -1,7 +1,11 @@
-# Copywriter by Pinpos
-# Kịch bản sử dụng
+# Copywriter by Pong Pong (phonghoang2k)
+
+# How to use
 
 ```dart
+
+part 'sign_in_page.trackable.dart';
+
 @trackable
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -14,72 +18,49 @@ class _SignInPageState extends State<SignInPage> with _$SignInPageMixin {
 }
 ```
 
-————————————————————————————————————————————————————————————————————————————
-
-```dart
-@optionalTypeArgs
-mixin _SignInPageMixin<T extends StatefulWidget> on State<T> {
-  final className = "SignInPage";
-
-  @protected
-  void onEnter() {
-    // EnterScreenViewData(to: className).analytics();
-  }
-
-  @protected
-  void onExit() {
-    // ExitScreenViewData(from: className).analytics();
-  }
-
-  @override
-  void initState() {
-    onEnter();
-    log("Load TrackablePage: $className", name: 'TRACKER_FLUTTER');
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    onExit();
-    log("Unload TrackablePage: $className", name: 'TRACKER_FLUTTER');
-    super.dispose();
-  }
-}
-```
-
-- Với App Pinpos, dùng annotation `@trackablePinpos`, `@Trackable.pinpos()` để track screen view với EnterScreenViewData và ExitScreenViewData
-- Với các app khác, dùng annotation `@trackable`, `@Trackable()` để track screen view.
+- Using `@trackable` annotation to generate `part 'sign_in_page.trackable.dart';` file.
+- `part 'sign_in_page.trackable.dart';` file is generated from `tracker_flutter_generator.dart`
+  file, you can use it to track the screen.
 
 ```dart
 class Trackable {
   final String? contentType;
   final String? referrer;
-  final TrackingTenant tenant;
 
-  const Trackable({this.contentType, this.referrer, this.tenant = TrackingTenant.other});
+  const Trackable({this.contentType, this.referrer});
 }
 
 ```
 
-
-- Mixin `_$SignInPageMixin` được sinh ra từ file `tracker_flutter_generator.dart`, có thể `@override` các hàm `onEnter` và `onExit` để custom track các event khác nhau.
+- Using `Trackable` class to track the screen.
+- `Trackable` class has two properties: `contentType` and `referrer`.
 
 ```dart
-class _SignInPageState extends State<SignInPage> with _$SignInPageMixin {
-  @override
-  void onEnter() {
-    // Do something
-    super.onEnter();
-  }
+void main() {
+  runApp(const MyApp());
 
-  @override
-  void onExit() {
-    // Do something
-    super.onExit();
-  }
-
-  ......
+  Trackable.observer = const MyObserver();
 }
 ```
+
+- Set `Trackable.observer` to `MyObserver` class.
+
+```dart
+class MyObserver extends TrackableObserver {
+  @override
+  void onEnter(TrackerEventData event) {
+    // Do something when enter the screen
+  }
+
+  @override
+  void onExit(TrackerEventData event) {
+    // Do something when exit the screen
+  }
+}
+```
+
+- Implement `TrackableObserver` class to observe the screen.
+- Implement `onEnter` method to do something when enter the screen.
+- Implement `onExit` method to do something when exit the screen.
 
 

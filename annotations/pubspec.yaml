@@ -3,6 +3,7 @@ description: >
   Annotations for the trackable code-generator.
   This package does nothing without trackable too.
 version: 0.0.1
+repository: https://github.com/phonghoang2k/tracker_generator
 
 environment:
   sdk: '>=3.1.1 <4.0.0'
