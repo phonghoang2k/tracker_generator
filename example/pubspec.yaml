@@ -1,0 +1,33 @@
+name: example
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.1 <4.0.0'
+
+tracking: &tracking https://gitlab+deploy-token-240:agkiVjxc8EtzM9e-ydj5@git.teko.vn/pos365/pinpos/package/tracking
+
+dependencies:
+  flutter:
+    sdk: flutter
+  tracker_flutter_annotations:
+    path: ../annotations
+
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: any
+  tracker_flutter_generators:
+    path: ../generators
+
+flutter:
+
+  uses-material-design: true
+
