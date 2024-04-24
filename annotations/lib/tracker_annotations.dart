@@ -1,4 +1,4 @@
-library tracker_flutter_annotations;
+library tracker_annotations;
 
 export 'dart:developer' show log;
 

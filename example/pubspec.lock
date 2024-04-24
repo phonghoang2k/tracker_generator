@@ -211,11 +211,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -336,14 +331,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
-  plugin_platform_interface:
-    dependency: transitive
-    description:
-      name: plugin_platform_interface
-      sha256: "4820fbfdb9478b1ebae27888254d445073732dae3d6ea81f0b7e06d5dedc3f02"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.8"
   pool:
     dependency: transitive
     description:
@@ -445,14 +432,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.1"
-  terra_flutter:
-    dependency: transitive
-    description:
-      name: terra_flutter
-      sha256: f57803f4338beaaa34b23a6ee247ed0f26a9131b15b1493833be531d957db9bf
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.2"
   test_api:
     dependency: transitive
     description:
@@ -469,21 +448,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
-  tracker_flutter:
-    dependency: transitive
-    description:
-      path: "../../tracker_flutter"
-      relative: true
-    source: path
-    version: "0.1.0"
-  tracker_flutter_annotations:
+  tracker_annotations:
     dependency: "direct main"
     description:
       path: "../annotations"
       relative: true
     source: path
     version: "0.0.1"
-  tracker_flutter_generators:
+  tracker_generators:
     dependency: "direct dev"
     description:
       path: "../generators"
@@ -540,4 +512,3 @@ packages:
     version: "3.1.2"
 sdks:
   dart: ">=3.2.0 <4.0.0"
-  flutter: ">=2.5.0"

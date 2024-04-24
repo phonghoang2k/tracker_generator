@@ -1,5 +1,6 @@
+import 'package:example/sign_up_page.dart';
 import 'package:flutter/material.dart';
-import 'package:tracker_flutter_annotations/tracker_flutter_annotations.dart';
+import 'package:tracker_annotations/tracker_annotations.dart';
 
 part 'sign_in_page.trackable.dart';
 
@@ -28,8 +29,15 @@ class SignInPageState extends State<SignInPage> with _$SignInPageMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: FlutterLogo(
-          size: 200,
+        child: GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => SignUpPage(),
+            ));
+          },
+          child: FlutterLogo(
+            size: 200,
+          ),
         ),
       ),
     );

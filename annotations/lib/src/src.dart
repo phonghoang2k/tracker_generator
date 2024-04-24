@@ -1,2 +1,3 @@
 export 'tracker_generator.dart';
-export 'global.dart';
+export 'event.dart';
+export 'observer.dart';

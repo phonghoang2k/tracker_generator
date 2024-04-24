@@ -1,22 +1,27 @@
-enum TrackingTenant { pinpos, other }
+import 'package:tracker_annotations/src/event.dart';
+
+import 'observer.dart';
 
 class Trackable {
   const Trackable({
     this.contentType,
     this.referrer,
-    this.tenant = TrackingTenant.other,
   });
-
-  const Trackable.pinpos({
-    this.contentType,
-    this.referrer,
-  }) : tenant = TrackingTenant.pinpos;
 
   final String? contentType;
   final String? referrer;
-  final TrackingTenant tenant;
+
+  static TrackerObserver observer = const _DefaultTrackerObserver();
 }
 
 const trackable = Trackable();
 
-const trackablePinpos = Trackable.pinpos();
+class _DefaultTrackerObserver extends TrackerObserver {
+  const _DefaultTrackerObserver();
+
+  @override
+  void onEnter(TrackerEventData event) {}
+
+  @override
+  void onExit(TrackerEventData event) {}
+}

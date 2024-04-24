@@ -6,8 +6,8 @@ targets:
 
 builders:
   generators:
-    target: ":tracker_flutter_generators"
-    import: "package:tracker_flutter_generators/tracker_flutter_generators.dart"
+    target: ":tracker_generators"
+    import: "package:tracker_generators/tracker_generators.dart"
     builder_factories: ["trackable"] #Builder name(BuilderOptions)
     build_extensions: { ".dart": [".trackable.dart"] }
     auto_apply: dependents

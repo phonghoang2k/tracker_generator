@@ -1,9 +1,18 @@
 import 'package:meta/meta.dart';
 
-abstract class TrackerFlutterScreenEventObserver {
-  const TrackerFlutterScreenEventObserver();
+import 'event.dart';
 
-  // @protected
-  // @mustCallSuper
-  // void onEnter(TrackerFlutterGlobalEvent event);
+/// {@template observer}
+/// An interface for observing the behavior of [Trackable] instances.
+/// {@endtemplate}
+abstract class TrackerObserver {
+  const TrackerObserver();
+
+  /// Called whenever a page is entered.
+  @mustCallSuper
+  void onEnter(TrackerEventData event);
+
+  /// Called whenever a page is exited.
+  @mustCallSuper
+  void onExit(TrackerEventData event);
 }

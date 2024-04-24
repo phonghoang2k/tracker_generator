@@ -1,4 +1,4 @@
-name: tracker_flutter_annotations
+name: tracker_annotations
 description: >
   Annotations for the trackable code-generator.
   This package does nothing without trackable too.
@@ -10,8 +10,4 @@ environment:
 dependencies:
   meta: ^1.3.0
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  build_runner: ^2.4.9
 

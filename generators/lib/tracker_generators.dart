@@ -1,4 +1,4 @@
-library tracker_flutter_generators;
+library tracker_generators;
 
 import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';

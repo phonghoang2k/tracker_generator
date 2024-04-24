@@ -1,4 +1,4 @@
-name: tracker_flutter_generators
+name: tracker_generators
 description: >
   Code generation for immutable classes that has a simple syntax/API without
   compromising on the features.
@@ -8,16 +8,11 @@ publish_to: none
 environment:
   sdk: '>=3.1.1 <4.0.0'
 
-tracking: &tracking https://gitlab+deploy-token-240:agkiVjxc8EtzM9e-ydj5@git.teko.vn/pos365/pinpos/package/tracking
-
 dependencies:
   build:
   source_gen: ^1.5.0
-  tracker_flutter_annotations:
+  tracker_annotations:
     path: ../annotations
-#    git:
-#      url: *tracking
-#      path: tracker_flutter_generator/annotations
 
 dev_dependencies:
   flutter_lints: ^3.0.1

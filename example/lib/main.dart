@@ -1,13 +1,25 @@
 import 'package:example/sign_in_page.dart';
 import 'package:flutter/material.dart';
-import 'package:tracker_flutter_annotations/tracker_flutter_annotations.dart';
+import 'package:tracker_annotations/tracker_annotations.dart';
+
+class MyObserver extends TrackerObserver {
+  const MyObserver();
+
+  @override
+  void onEnter(TrackerEventData event) {
+    print('onEnter: $event');
+  }
+
+  @override
+  void onExit(TrackerEventData event) {
+    print('onExit: $event');
+  }
+}
 
 void main() {
   runApp(const MyApp());
-  TrackerFlutterGlobal()
-    ..setAppId('appId')
-    ..setUserId("aaaa")
-    ..setPrefix('fnb');
+
+  Trackable.observer = const MyObserver();
 }
 
 class MyApp extends StatelessWidget {
