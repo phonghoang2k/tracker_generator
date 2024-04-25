@@ -1,3 +1,8 @@
 ## 0.0.1
+* Add support for annotations in the `annotations` package.
 
-* TODO: Describe initial release.
+## 0.0.2
+* Update README.md
+## 0.0.3
+* Update README.md
+

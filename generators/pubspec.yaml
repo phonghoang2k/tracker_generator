@@ -4,16 +4,15 @@ description: >
   compromising on the features.
 version: 0.0.1
 repository: https://github.com/phonghoang2k/tracker_generator
-publish_to: none
 
 environment:
   sdk: '>=3.1.1 <4.0.0'
 
 dependencies:
-  build:
+  build: ^2.4.1
   source_gen: ^1.5.0
-  tracker_annotations:
-    path: ../annotations
+  tracker_annotations: ^0.0.1
+  analyzer: ^5.13.0
 
 dev_dependencies:
   flutter_lints: ^3.0.1
