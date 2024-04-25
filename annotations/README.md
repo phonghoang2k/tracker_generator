@@ -1,39 +1,66 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Copywriter by Pong Pong (phonghoang2k)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+# How to use
 
 ```dart
-const like = 'sample';
+
+part 'sign_in_page.trackable.dart';
+
+@trackable
+class SignInPage extends StatefulWidget {
+  const SignInPage({Key? key}) : super(key: key);
+
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> with _$SignInPageMixin {
+}
 ```
 
-## Additional information
+- Using `@trackable` annotation to generate `part 'sign_in_page.trackable.dart';` file.
+- `part 'sign_in_page.trackable.dart';` file is generated from `tracker_flutter_generator.dart`
+  file, you can use it to track the screen.
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+class Trackable {
+  final String? contentType;
+  final String? referrer;
+
+  const Trackable({this.contentType, this.referrer});
+}
+
+```
+
+- Using `Trackable` class to track the screen.
+- `Trackable` class has two properties: `contentType` and `referrer`.
+
+```dart
+void main() {
+  runApp(const MyApp());
+
+  Trackable.observer = const MyObserver();
+}
+```
+
+- Set `Trackable.observer` to `MyObserver` class.
+
+```dart
+class MyObserver extends TrackableObserver {
+  @override
+  void onEnter(TrackerEventData event) {
+    // Do something when enter the screen
+  }
+
+  @override
+  void onExit(TrackerEventData event) {
+    // Do something when exit the screen
+  }
+}
+```
+
+- Implement `TrackableObserver` class to observe the screen.
+- Implement `onEnter` method to do something when enter the screen.
+- Implement `onExit` method to do something when exit the screen.
+
+
