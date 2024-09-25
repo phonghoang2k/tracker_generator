@@ -475,17 +475,19 @@ packages:
   tracker_annotations:
     dependency: "direct main"
     description:
-      path: "../annotations"
-      relative: true
-    source: path
-    version: "0.0.3"
+      name: tracker_annotations
+      sha256: e2db00bf4a58eff228d68771a5fbbfed4f063d5c6e45626e3f47d64679e2d434
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.4"
   tracker_generators:
     dependency: "direct dev"
     description:
-      path: "../generators"
-      relative: true
-    source: path
-    version: "0.0.1"
+      name: tracker_generators
+      sha256: a1856571d8fb676f0eca639082e45af1b547012aa4e5a4e0ddadbc1d376d90a6
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.3"
   typed_data:
     dependency: transitive
     description:

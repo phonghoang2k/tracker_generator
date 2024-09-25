@@ -9,13 +9,10 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.1.1 <4.0.0'
 
-tracking: &tracking https://gitlab+deploy-token-240:agkiVjxc8EtzM9e-ydj5@git.teko.vn/pos365/pinpos/package/tracking
-
 dependencies:
   flutter:
     sdk: flutter
-  tracker_annotations:
-    path: ../annotations
+  tracker_annotations: ^0.0.4
 
 
   cupertino_icons: ^1.0.2
@@ -24,8 +21,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: any
-  tracker_generators:
-    path: ../generators
+  tracker_generators: ^0.0.3
 
 flutter:
 

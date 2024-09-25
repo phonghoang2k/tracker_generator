@@ -2,7 +2,7 @@ name: tracker_generators
 description: >
   Code generation for immutable classes that has a simple syntax/API without
   compromising on the features.
-version: 0.0.1
+version: 0.0.3
 repository: https://github.com/phonghoang2k/tracker_generator
 
 environment:
@@ -11,7 +11,7 @@ environment:
 dependencies:
   build: ^2.4.1
   source_gen: ^1.5.0
-  tracker_annotations: ^0.0.1
+  tracker_annotations: ^0.0.4
   analyzer: ^6.0.0
 
 dev_dependencies:

@@ -2,7 +2,7 @@ name: tracker_annotations
 description: >
   Annotations for the trackable code-generator.
   This package does nothing without trackable too.
-version: 0.0.3
+version: 0.0.4
 repository: https://github.com/phonghoang2k/tracker_generator
 
 environment:
