@@ -8,9 +8,9 @@ part of 'sign_in_page.dart';
 
 @optionalTypeArgs
 mixin _$SignInPageMixin on State<SignInPage> {
-  final className = "SignInPage";
+  final className = "SignInPageQWe";
   final contentType = null;
-  final referrer = null;
+  final referrer = "asdasdas";
   Map<String, dynamic> get params => {
         "name": _tryToJson(widget.name),
         "version": _tryToJson(widget.version),

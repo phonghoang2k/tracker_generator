@@ -4,7 +4,10 @@ import 'package:tracker_annotations/tracker_annotations.dart';
 
 part 'sign_in_page.trackable.dart';
 
-@trackable
+@Trackable(
+  screenName: "SignInPageQWe",
+  referrer: "asdasdas"
+)
 class SignInPage extends StatefulWidget {
   final String name;
   final double version;

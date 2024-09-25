@@ -6,10 +6,12 @@ class Trackable {
   const Trackable({
     this.contentType,
     this.referrer,
+    this.screenName,
   });
 
   final String? contentType;
   final String? referrer;
+  final String? screenName;
 
   static TrackerObserver observer = const _DefaultTrackerObserver();
 }

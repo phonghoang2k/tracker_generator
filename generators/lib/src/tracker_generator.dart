@@ -10,10 +10,12 @@ class TrackerGenerator extends GeneratorForAnnotation<Trackable> {
   Trackable _parseConfig(Element element, ConstantReader annotation) {
     final contentType = annotation.peek("contentType")?.stringValue;
     final referrer = annotation.peek("referrer")?.stringValue;
+    final screenName = annotation.peek("screenName")?.stringValue;
 
     return Trackable(
       contentType: contentType,
       referrer: referrer,
+      screenName: screenName,
     );
   }
 
@@ -35,7 +37,7 @@ class TrackerGenerator extends GeneratorForAnnotation<Trackable> {
     // CLASSNAME + PARAMS
     buffer.writeln("@optionalTypeArgs");
     buffer.writeln("mixin _\$${className}Mixin on State<$className> {");
-    buffer.writeln("  final className = \"$className\";");
+    buffer.writeln("  final className = \"${config.screenName ?? className}\";");
     buffer.writeln(
         "  final contentType = ${config.contentType != null ? "\"${config.contentType}\"" : null};");
     buffer.writeln(
