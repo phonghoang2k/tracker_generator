@@ -7,4 +7,5 @@
 * Update README.md
 ## 0.0.4
 * Add screenName to the annotation
-
+## 0.0.5
+* Update meta package to ^1.7.0

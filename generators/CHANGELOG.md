@@ -5,3 +5,5 @@
 * Update README.md
 ## 0.0.4
 * Update source_gen to 2.0.0
+## 0.0.5
+* Update analyzer to ^7.0.0
